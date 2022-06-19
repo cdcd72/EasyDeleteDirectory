@@ -29,7 +29,7 @@ namespace EasyDeleteDirectory
         /// </summary>
         private void InitializeComponent()
         {
-            this.TargetDirectoryPathTextBox = new System.Windows.Forms.TextBox();
+            this.TargetDirectoryTextBox = new System.Windows.Forms.TextBox();
             this.SelectDirectoryButton = new System.Windows.Forms.Button();
             this.FolderBrowserDialog = new System.Windows.Forms.FolderBrowserDialog();
             this.CurrentSelectedDirectoryLabel = new System.Windows.Forms.Label();
@@ -38,22 +38,23 @@ namespace EasyDeleteDirectory
             this.MessageTextBox = new System.Windows.Forms.TextBox();
             this.MessageLabel = new System.Windows.Forms.Label();
             this.DeleteDirectoryButton = new System.Windows.Forms.Button();
+            this.ClearDirectoryButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // TargetDirectoryPathTextBox
+            // TargetDirectoryTextBox
             // 
-            this.TargetDirectoryPathTextBox.BackColor = System.Drawing.Color.White;
-            this.TargetDirectoryPathTextBox.Enabled = false;
-            this.TargetDirectoryPathTextBox.Location = new System.Drawing.Point(11, 37);
-            this.TargetDirectoryPathTextBox.Multiline = true;
-            this.TargetDirectoryPathTextBox.Name = "TargetDirectoryPathTextBox";
-            this.TargetDirectoryPathTextBox.ReadOnly = true;
-            this.TargetDirectoryPathTextBox.Size = new System.Drawing.Size(555, 44);
-            this.TargetDirectoryPathTextBox.TabIndex = 0;
+            this.TargetDirectoryTextBox.BackColor = System.Drawing.Color.White;
+            this.TargetDirectoryTextBox.Enabled = false;
+            this.TargetDirectoryTextBox.Location = new System.Drawing.Point(11, 37);
+            this.TargetDirectoryTextBox.Multiline = true;
+            this.TargetDirectoryTextBox.Name = "TargetDirectoryTextBox";
+            this.TargetDirectoryTextBox.ReadOnly = true;
+            this.TargetDirectoryTextBox.Size = new System.Drawing.Size(417, 44);
+            this.TargetDirectoryTextBox.TabIndex = 0;
             // 
             // SelectDirectoryButton
             // 
-            this.SelectDirectoryButton.Location = new System.Drawing.Point(571, 37);
+            this.SelectDirectoryButton.Location = new System.Drawing.Point(434, 36);
             this.SelectDirectoryButton.Name = "SelectDirectoryButton";
             this.SelectDirectoryButton.Size = new System.Drawing.Size(129, 46);
             this.SelectDirectoryButton.TabIndex = 1;
@@ -66,7 +67,7 @@ namespace EasyDeleteDirectory
             this.CurrentSelectedDirectoryLabel.AutoSize = true;
             this.CurrentSelectedDirectoryLabel.Location = new System.Drawing.Point(11, 14);
             this.CurrentSelectedDirectoryLabel.Name = "CurrentSelectedDirectoryLabel";
-            this.CurrentSelectedDirectoryLabel.Size = new System.Drawing.Size(233, 18);
+            this.CurrentSelectedDirectoryLabel.Size = new System.Drawing.Size(204, 14);
             this.CurrentSelectedDirectoryLabel.TabIndex = 2;
             this.CurrentSelectedDirectoryLabel.Text = "Current Selected Directory：";
             // 
@@ -75,7 +76,7 @@ namespace EasyDeleteDirectory
             this.DirectoryNamesLabel.AutoSize = true;
             this.DirectoryNamesLabel.Location = new System.Drawing.Point(11, 88);
             this.DirectoryNamesLabel.Name = "DirectoryNamesLabel";
-            this.DirectoryNamesLabel.Size = new System.Drawing.Size(363, 18);
+            this.DirectoryNamesLabel.Size = new System.Drawing.Size(318, 14);
             this.DirectoryNamesLabel.TabIndex = 3;
             this.DirectoryNamesLabel.Text = "Target Directory Names（Split with comma）：";
             // 
@@ -83,7 +84,7 @@ namespace EasyDeleteDirectory
             // 
             this.TargetDirectoryNamesTextBox.Location = new System.Drawing.Point(11, 112);
             this.TargetDirectoryNamesTextBox.Name = "TargetDirectoryNamesTextBox";
-            this.TargetDirectoryNamesTextBox.Size = new System.Drawing.Size(691, 25);
+            this.TargetDirectoryNamesTextBox.Size = new System.Drawing.Size(417, 22);
             this.TargetDirectoryNamesTextBox.TabIndex = 4;
             this.TargetDirectoryNamesTextBox.Text = "bin,obj";
             // 
@@ -96,7 +97,7 @@ namespace EasyDeleteDirectory
             this.MessageTextBox.Name = "MessageTextBox";
             this.MessageTextBox.ReadOnly = true;
             this.MessageTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.MessageTextBox.Size = new System.Drawing.Size(555, 120);
+            this.MessageTextBox.Size = new System.Drawing.Size(417, 46);
             this.MessageTextBox.TabIndex = 5;
             // 
             // MessageLabel
@@ -104,13 +105,13 @@ namespace EasyDeleteDirectory
             this.MessageLabel.AutoSize = true;
             this.MessageLabel.Location = new System.Drawing.Point(11, 145);
             this.MessageLabel.Name = "MessageLabel";
-            this.MessageLabel.Size = new System.Drawing.Size(81, 18);
+            this.MessageLabel.Size = new System.Drawing.Size(120, 14);
             this.MessageLabel.TabIndex = 6;
-            this.MessageLabel.Text = "Message：";
+            this.MessageLabel.Text = "Output Message：";
             // 
             // DeleteDirectoryButton
             // 
-            this.DeleteDirectoryButton.Location = new System.Drawing.Point(573, 204);
+            this.DeleteDirectoryButton.Location = new System.Drawing.Point(434, 165);
             this.DeleteDirectoryButton.Name = "DeleteDirectoryButton";
             this.DeleteDirectoryButton.Size = new System.Drawing.Size(129, 46);
             this.DeleteDirectoryButton.TabIndex = 7;
@@ -118,11 +119,22 @@ namespace EasyDeleteDirectory
             this.DeleteDirectoryButton.UseVisualStyleBackColor = true;
             this.DeleteDirectoryButton.Click += new System.EventHandler(this.DeleteDirectoryButton_Click);
             // 
+            // ClearDirectoryButton
+            // 
+            this.ClearDirectoryButton.Location = new System.Drawing.Point(434, 88);
+            this.ClearDirectoryButton.Name = "ClearDirectoryButton";
+            this.ClearDirectoryButton.Size = new System.Drawing.Size(129, 46);
+            this.ClearDirectoryButton.TabIndex = 8;
+            this.ClearDirectoryButton.Text = "Clear Selected Directory";
+            this.ClearDirectoryButton.UseVisualStyleBackColor = true;
+            this.ClearDirectoryButton.Click += new System.EventHandler(this.ClearDirectoryButton_Click);
+            // 
             // EasyDeleteDirectoryForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(711, 298);
+            this.ClientSize = new System.Drawing.Size(573, 221);
+            this.Controls.Add(this.ClearDirectoryButton);
             this.Controls.Add(this.DeleteDirectoryButton);
             this.Controls.Add(this.MessageLabel);
             this.Controls.Add(this.MessageTextBox);
@@ -130,7 +142,7 @@ namespace EasyDeleteDirectory
             this.Controls.Add(this.DirectoryNamesLabel);
             this.Controls.Add(this.CurrentSelectedDirectoryLabel);
             this.Controls.Add(this.SelectDirectoryButton);
-            this.Controls.Add(this.TargetDirectoryPathTextBox);
+            this.Controls.Add(this.TargetDirectoryTextBox);
             this.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.Name = "EasyDeleteDirectoryForm";
             this.Text = "Easy Delete Directory";
@@ -141,7 +153,7 @@ namespace EasyDeleteDirectory
 
         #endregion
 
-        private System.Windows.Forms.TextBox TargetDirectoryPathTextBox;
+        private System.Windows.Forms.TextBox TargetDirectoryTextBox;
         private System.Windows.Forms.Button SelectDirectoryButton;
         private System.Windows.Forms.FolderBrowserDialog FolderBrowserDialog;
         private System.Windows.Forms.Label CurrentSelectedDirectoryLabel;
@@ -150,6 +162,7 @@ namespace EasyDeleteDirectory
         private System.Windows.Forms.TextBox MessageTextBox;
         private System.Windows.Forms.Label MessageLabel;
         private System.Windows.Forms.Button DeleteDirectoryButton;
+        private System.Windows.Forms.Button ClearDirectoryButton;
     }
 }
 
