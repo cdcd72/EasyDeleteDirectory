@@ -1,17 +1,16 @@
 using System;
 using System.Windows.Forms;
 
-namespace EasyDeleteDirectory
+namespace EasyDeleteDirectory;
+
+internal static class Program
 {
-    internal static class Program
+    [STAThread]
+    internal static void Main()
     {
-        [STAThread]
-        internal static void Main()
-        {
-            Application.SetHighDpiMode(HighDpiMode.SystemAware);
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new EasyDeleteDirectoryForm());
-        }
+        Application.SetHighDpiMode(HighDpiMode.SystemAware);
+        Application.EnableVisualStyles();
+        Application.SetCompatibleTextRenderingDefault(false);
+        Application.Run(new EasyDeleteDirectoryForm());
     }
 }
